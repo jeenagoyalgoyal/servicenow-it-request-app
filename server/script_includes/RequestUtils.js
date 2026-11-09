@@ -1,7 +1,10 @@
 /**
  * Script Include: RequestUtils
  * Client callable: true (needed for GlideAjax)
- * Accessible from: This application scope only
+ * Accessible from: All application scopes (GlideAjax requests come in through
+ *   the global AJAX processor, so "This application scope only" returns
+ *   "HTTP Processor class not found")
+ * Needs an execute ACL of type client_callable_script_include named RequestUtils
  *
  * Shared logic for the IT Service Request app:
  *  - priority from the impact x urgency matrix

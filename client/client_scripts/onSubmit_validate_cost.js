@@ -9,7 +9,8 @@
  */
 function onSubmit() {
     var COST_LIMIT = 1000;
-    var cost = parseInt(g_form.getValue('estimated_cost'), 10) || 0;
+    // Integer fields display with thousands separators ("1,500"), so strip them first.
+    var cost = parseInt(String(g_form.getValue('estimated_cost')).replace(/[^0-9-]/g, ''), 10) || 0;
     var justification = (g_form.getValue('justification') || '').trim();
 
     g_form.hideFieldMsg('justification', true);

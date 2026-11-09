@@ -9,7 +9,7 @@
 
 | Label | Column name | Type | Notes |
 |---|---|---|---|
-| Requested for | `requested_for` | Reference (sys_user) | Mandatory. Default: `javascript:gs.getUserID()` |
+| Requested for | `requested_for` | Reference (sys_user) | Mandatory. Defaults to the submitter (Business Rule "Default requested for") |
 | Category | `category` | Choice | Mandatory. Choices below |
 | Estimated cost | `estimated_cost` | Integer | Dollars. Default 0 |
 | Justification | `justification` | String (1000) | Required when estimated cost is over 1000 |

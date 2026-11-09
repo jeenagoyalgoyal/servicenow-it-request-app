@@ -19,7 +19,7 @@
     var summary = [];
 
     var agg = new GlideAggregate(TABLE);
-    agg.addActiveQuery();
+    agg.addQuery('active', true); // addActiveQuery() isn't allowed on GlideAggregate in scoped apps
     agg.addAggregate('COUNT');
     agg.groupBy('category');
     agg.query();
